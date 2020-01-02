@@ -1,0 +1,5 @@
+# node dependencies
+node_modules/
+
+# ignores the .DS_Store file created every time a folder is navigated to
+.DS_Store
