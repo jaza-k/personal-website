@@ -6,3 +6,5 @@ Here's how you can run this website on localhost:
  
 - Clone this repository using the command ```git clone https://github.com/jaza-k/personal-website```
 - Run ```npm install```
+- Run ```gulp``` 
+- Run ```npm start``` and open localhost:3000 to view the site in your browser
