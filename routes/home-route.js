@@ -1,10 +1,11 @@
+// routing for home page
+
 const express = require('express');
 const router = express.Router();
-const fs = require('fs'); // allows node to interact with the file system
 
 /* GET home page */
 router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Home' });
+  res.render('home', { title: 'Jaza K.', author: 'Jaza K.' });
 });
 
 module.exports = router;

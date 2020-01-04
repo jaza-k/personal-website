@@ -2,25 +2,33 @@
   "name": "personal-website",
   "version": "0.0.0",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaza-k/personal-website.git"
   },
+  "author": "Jaza K.",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jaza-k/personal-website/issues"
+  },
+  "homepage": "https://jazakhan.com",
   "dependencies": {
+    "compression": "^1.7.4",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssnano": "^2.1.3",
-    "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "normalize.css": "^8.0.1",
     "pug": "^2.0.4"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.0.2",
     "nodemon": "^2.0.2"
   }
 }

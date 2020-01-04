@@ -1,35 +1,52 @@
-// var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
 
-var indexRouter = require('./routes/home-route');
-var usersRouter = require('./routes/users');
+// improves performance by decreasing the downloadable amount of data that's served
+const compression = require('compression');
 
-var app = express();
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+const router = require('./routes/route-handler');
+const port = 3000;
+const app = express();
+
+// cache time for static files (a month)
+const cacheTime = 30 * 24 * 60 * 60 * 1000;
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
+app.set('views', (__dirname, 'views'));
+app.set('view engine', 'pug'); // sets express view engine to Pug
+
+// compresses the response bodies from all requests before sending them
+app.use(compression());
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// use '/public/' to serve static files. also sets cache time
+app.use(express.static(__dirname + '/public', {maxAge: cacheTime}));
 
-// catch 404 and forward to error handler
+// create all routes using individual pages
+for (let page in router) {
+  app.use(page, router[page]);
+}
+
+// catch 404 and forward to error handler (show 404 page)
 app.use((request, response, next) => {
   response.status(404).render("errors/404", {title: "Error 404"});
 });
 
-// catch 500 and forward to error handler
+// catch 500 and forward to error handler (show 500 page)
 app.use((request, response, next) => {
   response.status(500).render("errors/500", {title: "Server Error"});
 });
 
-module.exports = app;
+// GET request for favicon.ico is ignored
+app.get('/favicon.ico', (request, response) => {
+  // indicates that request has succeeded but no additional content is sent
+  response.status(204);
+});
+
+app.listen(port);
+console.log(`Express is listening on port ${port}`);
