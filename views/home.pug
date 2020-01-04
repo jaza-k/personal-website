@@ -1,5 +1,12 @@
 extends layout
 
-block content
-  h1= title
-  p Welcome #{title}
+append content
+
+    div.intro
+        h1#intro-prompt root@kali
+        h1.intro-symbols :<span id="intro-root">~</span><span class="intro-symbols">#</span><span>  </span><span id="intro-command">./intro.sh</span>
+    h1.title= title
+    p.welcome Welcomeeeee #{title}
+
+//- TO-DO: Use pure Sass to create a fading out intro and
+//- fading in home page

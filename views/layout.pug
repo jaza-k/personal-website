@@ -1,7 +1,25 @@
+// Jaza K. 
+// https://github.com/jaza-k/personal-website
+
 doctype html
-html
+html(lang="en")
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="author" content=author)
+    // normalize.css file to make browsers render all elements more consistently 
+    link(rel="stylesheet" href="/public/stylesheets/normalize.min.css")
+    
+    // TO-DO: include a favicon
+    
+    // home CSS file
+    link(rel="stylesheet" href="/stylesheets/home.min.css")
+    block head
+    title=title
+    meta(name="description" content=description)
+    
   body
     block content
+
+    block scripts
