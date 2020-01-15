@@ -1,20 +1,9 @@
 /// Viewport sized typography with minimum and maximum values
 /// @author Eduardo Boucas (@eduardoboucas)
-/// @param {Number}   $responsive  - Viewport-based size
-/// @param {Number}   $min         - Minimum font size (px)
-/// @param {Number}   $max         - Maximum font size (px)
-///                                  (optional)
-/// @param {Number}   $fallback    - Fallback for viewport-
-///                                  based units (optional)
-/// @example scss - 5vw font size (with 50px fallback), 
-///                 minumum of 35px and maximum of 150px
-/// @include responsive-font(5vw, 35px, 150px, 50px);
-
 @mixin responsive-font($responsive, $min, $max: false, $fallback: false) 
   $responsive-unitless: $responsive / ($responsive - $responsive + 1)
   $dimension: if(unit($responsive) == 'vh', 'height', 'width')
   $min-breakpoint: $min / $responsive-unitless * 100
-  
   @media (max-#{$dimension}: #{$min-breakpoint}) 
     font-size: $min
   @if $max 
@@ -27,71 +16,70 @@
 
 $bg-color: #0a0f13
 
-// below width of 840px shit breaks
-
-// breakpoints  
-$break-tiny: 300px
-$break-small: 420px
-$break-mid: 530px
-$break-large: 1000px
-
-//  FOR REFERENCE: MY VIEWPORT IS width:982 × height:-1006 
-body 
+body
   background-color: $bg-color
+  background-image: url("/img/what-the-hex-dark.png")
   height: 90vh
   overflow-x: hidden
   text-align: center
 
-.intro
-  width: 35vw
+#particles-js
+  position: absolute
+  background-position: 50% 50%
+  background-repeat: no-repeat
+  width: 100%
+  height: 100%
+  top: 0
+  z-index: 0
+
+.terminal1
+  +responsive-font(1vw, 12px)
   display: inline-block
   position: fixed
   top: 50%
   left: 50%
-  transform: translate(-50%, -50%)
-  height: 7vw
-  border: 1px solid red
+  transform: translate(-95%, -50%)
 
-.intro1
-  width: 13vw
-  +responsive-font(1.2vw, 13px)
+.terminal2
+  +responsive-font(1vw, 12px)
   display: inline-block
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-130%, -50%)
-  border: 1px solid red
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(10%, -50%)
 
-.intro2
-  width: 21vw
-  +responsive-font(1.2vw, 13px)
-  display: inline-block
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-20%, -50%)
-  border: 1px solid red
-
-#intro-prompt
+#prompt
   color: red
 
-.intro-symbols, #intro-command
+.symbols, #command
   color: white
 
-#intro-root
+#root
   color: #68A5FF
 
-#intro-prompt, .intro-symbols, #intro-command, #intro-root
+#prompt, .symbols, #command, #root
   font-family: FiraCode, monospace
   font-weight: 40
   display: inline-block
   text-align: center
+
+#command
+  width: 7em
+  overflow: hidden
+  border-right: .40em solid #ECECEC
+  white-space: nowrap
+  margin: 0 auto
+  animation: typewriter 1s steps(15, end), blink-caret 1s step-end infinite
+  box-sizing: border-box
+
+@keyframes typewriter
+  from
+    width: 0 
+  to 
+    width: 100% 
  
-.title, .welcome
-  display: none
-
-
-  
-
-
-
+@keyframes blink-caret
+  from, to
+    border-color: transparent
+  50% 
+    border-color: #ECECEC

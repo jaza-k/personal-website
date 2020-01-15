@@ -24,7 +24,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// use '/public/' to serve static files. also sets cache time
+// use '/public/' to serve static files. also sets cache time for files
 app.use(express.static(__dirname + '/public', {maxAge: cacheTime}));
 
 // create all routes using individual pages
