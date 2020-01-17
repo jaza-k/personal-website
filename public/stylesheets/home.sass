@@ -19,6 +19,8 @@ $bg-color: #0a0f13
 body
   background-color: $bg-color
   background-image: url("/img/what-the-hex-dark.png")
+  background-position: 0 0
+  background-attachment: fixed
   height: 90vh
   overflow-x: hidden
   text-align: center
@@ -32,54 +34,53 @@ body
   top: 0
   z-index: 0
 
-.terminal1
-  +responsive-font(1vw, 12px)
+.terminal
+  +responsive-font(1vw, 8px, 12px)
   display: inline-block
   position: fixed
-  top: 50%
-  left: 50%
-  transform: translate(-95%, -50%)
-
-.terminal2
-  +responsive-font(1vw, 12px)
-  display: inline-block
-  position: fixed
-  top: 50%
-  left: 50%
-  transform: translate(10%, -50%)
+  top: 0%
+  left: 0%
+  // transform: translate(-50%, -50%)
+  border: 1px solid red
 
 #prompt
-  color: red
+  color: #53FFD6
 
-.symbols, #command
-  color: white
+#symbol, #arrow
+  color: #FC61FF
 
-#root
-  color: #68A5FF
+#root, #directory
+  color: #fff
 
-#prompt, .symbols, #command, #root
-  font-family: FiraCode, monospace
-  font-weight: 40
+#prompt, #symbol, #root, #arrow
+  font-family: "Fira Code"
+  font-weight: 10
   display: inline-block
   text-align: center
+  letter-spacing: 0.04em
 
-#command
-  width: 7em
-  overflow: hidden
-  border-right: .40em solid #ECECEC
-  white-space: nowrap
-  margin: 0 auto
-  animation: typewriter 1s steps(15, end), blink-caret 1s step-end infinite
-  box-sizing: border-box
+#arrow
+  margin-left: 10px
 
-@keyframes typewriter
-  from
-    width: 0 
-  to 
-    width: 100% 
- 
-@keyframes blink-caret
-  from, to
-    border-color: transparent
-  50% 
-    border-color: #ECECEC
+.cursor   // ************ TO-DO: BRING BACK BLINKING BORDER!!!!   **************
+  // border-color: #D8D8D8
+  // border-width: 1px
+  border: 1px solid #d8d8d8
+  height: 4vw
+  max-height: 2vw
+  min-height: 1vw
+  background-color: #D8D8D8
+  width: 1vw
+  display: inline-block
+  margin-left: 2vw
+  vertical-align: middle
+  margin-bottom: 1vw
+  animation:blinkingCursor 1.2s infinite
+
+@keyframes blinkingCursor
+  0%
+    opacity: 100%
+  50%
+    opacity: 0%
+  100%
+    opacity: 100%

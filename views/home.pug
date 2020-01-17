@@ -2,15 +2,14 @@ extends layout
 
 append content
     div#particles-js
-    div.top-nav
-        div.terminal
-            div.terminal1
-                h1#prompt root@kali
-                    span.symbols  : 
-                    span#root ~ 
-                    span.symbols # 
-            div.terminal2
-                h1#command ./intro.sh
+    div.terminal
+        h1#prompt jazak
+            span#symbol  &#8226;
+            span#root  ~
+            span#directory /Home
+            span#arrow »
+            span.space &nbsp;
+            //- div.cursor
 
 block scripts
     script(src="/lib/particles.min.js")
