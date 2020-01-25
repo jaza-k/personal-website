@@ -15,6 +15,8 @@
   font-size: $responsive
 
 $bg-color: #0a0f13
+$main-font: "Fira Code"
+$break-mid: 560px
 
 body
   background-color: $bg-color
@@ -23,7 +25,6 @@ body
   background-attachment: fixed
   height: 90vh
   overflow-x: hidden
-  text-align: center
 
 #particles-js
   position: absolute
@@ -34,14 +35,15 @@ body
   top: 0
   z-index: 0
 
-.terminal
-  +responsive-font(1vw, 8px, 12px)
+#terminal
+  margin: 0 auto
+  margin-left: 15px
+  +responsive-font(1vw, 8px, 10px)
   display: inline-block
   position: fixed
   top: 0%
   left: 0%
-  // transform: translate(-50%, -50%)
-  border: 1px solid red
+  // border: 1px solid red
 
 #prompt
   color: #53FFD6
@@ -53,34 +55,63 @@ body
   color: #fff
 
 #prompt, #symbol, #root, #arrow
-  font-family: "Fira Code"
+  font-family: $main-font
   font-weight: 10
   display: inline-block
   text-align: center
   letter-spacing: 0.04em
 
 #arrow
-  margin-left: 10px
+  margin-left: 6px
+  +responsive-font(2.8vw, 16px, 20px)
 
-.cursor   // ************ TO-DO: BRING BACK BLINKING BORDER!!!!   **************
-  // border-color: #D8D8D8
-  // border-width: 1px
-  border: 1px solid #d8d8d8
-  height: 4vw
-  max-height: 2vw
-  min-height: 1vw
-  background-color: #D8D8D8
-  width: 1vw
-  display: inline-block
-  margin-left: 2vw
-  vertical-align: middle
-  margin-bottom: 1vw
-  animation:blinkingCursor 1.2s infinite
+#cursor
+  color: white
+  margin-left: 5px
+  position: relative
+  bottom: 2px
+  +responsive-font(4vw, 18px, 20px)
+  animation: blink 1.8s infinite
+  -webkit-animation: fade 1s infinite
 
-@keyframes blinkingCursor
-  0%
-    opacity: 100%
+@keyframes fade
+  from
+    opacity: 1.0
   50%
-    opacity: 0%
-  100%
-    opacity: 100%
+    opacity: 0
+  to
+    opacity: 2.0
+
+@webkit-keyframes fade 
+  from 
+    opacity: 1.0
+  50%
+    opacity: 0.5
+  to
+    opacity: 1.0
+
+// ************************ FIX LINKS DESIGN AND RESPONSIVENESS **********************
+
+// VIEWPORT 600PX - MAKE LINKS DROP DOWN
+#nav
+  font-family: $main-font
+  +responsive-font(2vw, 15px, 20px)
+  display: inline-flex
+  text-transform: uppercase
+  margin-right: 15px
+  position: fixed
+  top: 0%
+  right: 0%
+  letter-spacing: 0.04em
+  z-index: 3
+  vertical-align: middle
+  // border: 1px solid red
+  margin-top: 16px
+
+#nav a
+  text-decoration: none
+  color: white
+
+.space
+  margin-left: 3vw
+
