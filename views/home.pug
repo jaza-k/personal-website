@@ -12,18 +12,33 @@ append content
             
     //- ********************** FIX PROJECTS LINK ******************************
     #nav
-        span#github-link 
+        p#github-link 
             a(target="_blank" rel="noreferrer" href="https://github.com/jaza-k") GitHub
-            span.space &nbsp;
-        span#resume-link 
+        span.space &nbsp;
+        p#resume-link 
             a(href="#") Résumé
-            span.space &nbsp;
-        span#projects-link
+        span.space &nbsp;
+        p#projects-link
             a(href="/projects-route") Projects
-            span.space &nbsp;
-        span#contact-link
+        span.space &nbsp;
+        p#contact-link
             a(href="#" id="email-link" title="email-alert") Contact
-        
+    
+    #intro
+        h2#main-heading Hey there,
+        p#intro-one I’m Jaza, a full-stack software developer and cybersec enthusiast currently based in beautiful 
+            span.location Alberta, Canada
+            span .
+        p#intro-two I like to create, design, develop, and build new things that spark my interest. Aside from coding, I’m a big fan of reading, skateboarding, playing on my PS4, or learning in class.
+        p#intro-three To see what I've worked on or currently making, head over to my 
+            span.git GitHub 
+            span profile or check out the 
+            span.projects Projects 
+            span section.
+        p#intro-four To get in touch with me, feel free to shoot me an 
+            span.email e-mail
+            span .
+
 block scripts
     script(src="/lib/particles.min.js")
     script(src="/js/home.js")
