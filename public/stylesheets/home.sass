@@ -17,8 +17,6 @@
 $bg-color: #0a0f13
 $main-font: "Fira Code"
 $sec-font: "Inconsolata"
-
-// ************ SETTLE ON COLORS *****************
   
 $github-color: #6DDF6B
 $resume-color: #D8DB4B
@@ -28,7 +26,7 @@ $location-color: #AA2828
 
 $break-large: 1400px
 $break-mid: 700px
-
+$break-small: 500px
 
 body
   background-color: $bg-color
@@ -56,7 +54,9 @@ body
   position: fixed
   top: 0%
   left: 0%
-  // border: 1px solid red
+  @media (max-width: 850px)
+    +responsive-font(1vw, 7px, 10px)
+    margin-top: 0
 
 #prompt
   color: #53FFD6
@@ -86,6 +86,8 @@ body
   +responsive-font(4vw, 18px, 21px)
   animation: blink 1.8s infinite
   -webkit-animation: fade 1s infinite
+  @media (max-width: $break-small)
+    +responsive-font(1vw, 16px, 21px)
 
 @keyframes fade
   from
@@ -103,9 +105,6 @@ body
   to
     opacity: 1.0
 
-// ************************ FIX LINKS DESIGN AND RESPONSIVENESS **********************
-// VIEWPORT 600PX - MAKE LINKS DROP DOWN
-
 #nav
   user-select: none
   font-family: $main-font
@@ -119,49 +118,39 @@ body
   letter-spacing: 0.04em
   z-index: 3
   vertical-align: middle
-  // border: 1px solid red
   @media (max-width: $break-mid)
-    display: block
-    line-height: 13px
-    margin: 0 auto
+    display: none
+  @media (max-width: $break-small)
+    display: none
 
 #nav a
   text-decoration: none
   color: white
   padding-bottom: 8px
-  // border: 1px solid red
 
 #github-link
-  padding-bottom: 4px
-  border-bottom-width: 3px
   border-bottom-color: $github-color
-  border-bottom-style: solid
 
 #resume-link
-  padding-bottom: 4px
-  border-bottom-width: 3px
   border-bottom-color: $resume-color
-  border-bottom-style: solid
 
 #projects-link
-  padding-bottom: 4px
-  border-bottom-width: 3px
   border-bottom-color: $projects-color
-  border-bottom-style: solid
 
 #contact-link
+  border-bottom-color: $contact-color
+
+#github-link, #resume-link, #projects-link, #contact-link
   padding-bottom: 4px
   border-bottom-width: 3px
-  border-bottom-color: $contact-color
   border-bottom-style: solid
+  @media (max-width: 700px)
+    border-bottom-width: 0
 
 .space
   width: 3vw
-  // border: 1px solid red
   @media (max-width: 700px)
     display: none
-
-// ********** MAKE INTRO TEXT FADE IN ON LOAD **********
 
 #intro
   margin-top: 105px
@@ -171,7 +160,11 @@ body
   margin-right: 350px
   @media (max-width: $break-large)
     margin-right: 0
-  // border: 1px solid red
+  @media (max-width: $break-small)
+    margin-top: 55px
+    margin-right: 0
+    padding-left: 10px
+    padding-right: 10px
 
 #main-heading, #intro-one, #intro-two, #intro-three, #intro-four
   color: white
@@ -182,19 +175,64 @@ body
   font-weight: 800
   font-style: italic
   margin-bottom: 45px
-  // border: 1px solid red
+  animation-name: textFadeIn
+  animation-duration: 1.3s
+  @media (max-width: $break-small)
+    +responsive-font(4vw, 30px, 42px)
+    margin-bottom: 20px
+
+@keyframes textFadeIn
+  0% 
+    opacity: 0
+  100%
+    opacity: 1
 
 #intro-one, #intro-two, #intro-three, #intro-four
   +responsive-font(3vw, 20px, 22px)
   padding-left: 2.5vw
   letter-spacing: 0.01em
-  margin-bottom: 35px
-  // border: 1px solid red
+  margin-bottom: 28px
+  animation-name: slowFadeIn
+  animation-duration: 1.7s
+  @media (max-width: $break-small)
+    +responsive-font(2.7vw, 16px, 22px)
+    margin-bottom: 20px
+    padding-left: 10px
+
+#intro-two
+  margin-bottom: 70px
+  @media (max-width: $break-small)
+    margin-bottom: 35px
+
+#intro-three, #intro-four
+  animation-name: slowestFadeIn
+  animation-duration: 3s
+
+@keyframes slowFadeIn
+  0%
+    opacity: 0
+  50%
+    opacity: 0
+  75%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes slowestFadeIn
+  0%
+    opacity: 0
+  50%
+    opacity: 0
+  75%
+    opacity: 0
+  100%
+    opacity: 1
 
 .location
   color: $location-color
 
-.git
+.git a 
+  text-decoration: none
   color: $github-color
 
 .projects

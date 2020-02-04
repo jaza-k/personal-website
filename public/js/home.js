@@ -26,7 +26,7 @@ let particlesJSON = {
         }
       },
       "opacity": {
-        "value": 0.4,
+        "value": 0.7,
         "random": false,
         "anim": {
           "enable": false,
@@ -49,12 +49,12 @@ let particlesJSON = {
         "enable": true,
         "distance": 300,
         "color": "#FD9AFF",
-        "opacity": 0.4,
+        "opacity": 0.6,
         "width": 1
       },
       "move": {
         "enable": true,
-        "speed": 5,
+        "speed": 4.2,
         "direction": "right",
         "random": true,
         "straight": false,
@@ -82,20 +82,20 @@ let particlesJSON = {
       },
       "modes": {
         "grab": {
-          "distance": 800,
+          "distance": 100,
           "line_linked": {
             "opacity": 1
           }
         },
         "bubble": {
-          "distance": 800,
-          "size": 80,
+          "distance": 100,
+          "size": 10,
           "duration": 2,
           "opacity": 0.8,
           "speed": 3
         },
         "repulse": {
-          "distance": 400,
+          "distance": 100,
           "duration": 0.4
         },
         "push": {
