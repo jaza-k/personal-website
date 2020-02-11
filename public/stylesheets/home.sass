@@ -55,7 +55,7 @@ body
   top: 0%
   left: 0%
   @media (max-width: 850px)
-    +responsive-font(1vw, 7px, 10px)
+    +responsive-font(1vw, 9px, 10px)
     margin-top: 0
 
 #prompt
@@ -87,7 +87,7 @@ body
   animation: blink 1.8s infinite
   -webkit-animation: fade 1s infinite
   @media (max-width: $break-small)
-    +responsive-font(1vw, 16px, 21px)
+    +responsive-font(1vw, 18px, 21px)
 
 @keyframes fade
   from
@@ -108,7 +108,7 @@ body
 #nav
   user-select: none
   font-family: $main-font
-  +responsive-font(2vw, 15px, 21px)
+  +responsive-font(3.5vw, 14px, 21px)
   display: inline-flex
   text-transform: uppercase
   margin-right: 20px
@@ -119,8 +119,6 @@ body
   z-index: 3
   vertical-align: middle
   @media (max-width: $break-mid)
-    display: none
-  @media (max-width: $break-small)
     display: none
 
 #nav a
@@ -160,9 +158,9 @@ body
   margin-right: 350px
   @media (max-width: $break-large)
     margin-right: 0
-  @media (max-width: $break-small)
+  @media (max-width: $break-mid)
     margin-top: 55px
-    margin-right: 0
+    margin-right: 15px
     padding-left: 10px
     padding-right: 10px
 
@@ -190,7 +188,7 @@ body
 #intro-one, #intro-two, #intro-three, #intro-four
   +responsive-font(3vw, 20px, 22px)
   padding-left: 2.5vw
-  letter-spacing: 0.01em
+  letter-spacing: 0.06em
   margin-bottom: 28px
   animation-name: slowFadeIn
   animation-duration: 1.7s
