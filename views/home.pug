@@ -10,8 +10,9 @@ append content
             span#arrow » 
             span#cursor _
             
-    //- ********************** FIX PROJECTS LINK ******************************
     #nav
+        //- #hamburger 
+        //-     p#menu-icon &#9776;
         p#github-link 
             a(target="_blank" rel="noreferrer" href="https://github.com/jaza-k") GitHub
         span.space &nbsp;
@@ -19,7 +20,7 @@ append content
             a(href="#") Résumé
         span.space &nbsp;
         p#projects-link
-            a(href="/projects-route") Projects
+            a(href="/projects") Projects
         span.space &nbsp;
         p#contact-link
             a(href="#" id="email-link" title="email-alert") Contact
@@ -43,4 +44,4 @@ block scripts
     script(src="/lib/particles.min.js")
     script(src="/js/home.js")
     script
-        | document.getElementById("email-link").addEventListener("click",function(){prompt("You can copy my e-mail address below: ","contact@jazakhan.com")});
+        | document.getElementById("email-link").addEventListener("click",function(){prompt("You can copy my e-mail address below: ","jaza-k@protonmail.com")});

@@ -4,8 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 /* GET projects page */
-router.get('/', (req, res) => {
-  res.render('/projects/projects-page', { title: 'Jaza K.', author: 'Jaza K.' });
+router.get('/', (request, response) => {
+  response.render('projects/main', {title: 'Jaza K.', author: 'Jaza K.'});
 });
 
 module.exports = router;

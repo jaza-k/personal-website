@@ -5,7 +5,7 @@ const compression = require('compression');
 
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const router = require('./routes/route-handler');
+const routes = require('./routes/route-handler');
 const port = 3000;
 const app = express();
 
@@ -28,8 +28,8 @@ app.use(cookieParser());
 app.use(express.static(__dirname + '/public', {maxAge: cacheTime}));
 
 // create all routes using individual pages
-for (let page in router) {
-  app.use(page, router[page]);
+for (let page in routes) {
+  app.use(page, routes[page]);
 }
 
 // catch 404 and forward to error handler (show 404 page)

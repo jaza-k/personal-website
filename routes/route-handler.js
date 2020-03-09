@@ -5,5 +5,5 @@ let projects = require('./projects-route');
 
 module.exports = {
     '/': home,
-    '/lab': projects
+    '/projects': projects
 }
