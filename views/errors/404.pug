@@ -1,5 +1,25 @@
 extends ../layout
 
 block content
-  h1 Oops
+  #particles-js
+  h1#error-heading Whoops! 
+    span#error-number 404
 
+  //-  ****************  FIX TERMINAL POSITION/RESPONSIVENESS ************
+
+  #error-terminal
+    #terminal
+      h1#prompt jazak
+        span#symbol  &#8226;
+        span#root  ~
+        span#directory /
+        span#arrow » 
+        span#info-text No such file or directory
+        span#cursor _
+
+  p#go-home Go back 
+    span#home-text home
+
+block scripts
+    script(src="/lib/particles.min.js")
+    script(src="/js/home.js")

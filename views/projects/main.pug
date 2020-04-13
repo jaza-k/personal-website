@@ -1,4 +1,30 @@
 extends layout
 
 append content
-    h1.me jazak
+    #particles-js
+    #terminal
+        h1#prompt jazak
+            span#symbol  &#8226;
+            span#root  ~
+            span#directory /Projects
+            span#arrow » 
+            span#cursor _
+
+    #nav
+        //- #hamburger 
+        //-     p#menu-icon &#9776;
+        p#github-link 
+            a(target="_blank" rel="noreferrer" href="https://github.com/jaza-k") GitHub
+        span.space &nbsp;
+        p#resume-link 
+            a(href="#") Résumé
+        span.space &nbsp;
+        p#projects-link
+            a(href="/projects") Projects
+        span.space &nbsp;
+        p#contact-link
+            a(href="#" id="email-link" title="email-alert") Contact
+
+block scripts
+    script(src="/lib/particles.min.js")
+    script(src="/js/home.js")
