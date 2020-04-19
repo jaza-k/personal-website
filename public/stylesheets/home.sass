@@ -45,7 +45,11 @@ body
   top: 0
   z-index: 0
   
-#terminal
+
+// TO-DO: FIX SCROLL PROBLEM. ADD INVISIBLE DIV/BACKGROUND FOR TEXT TO DISAPPEAR UNDER
+
+  
+  #terminal
   user-select: none
   margin-top: 0.5vh
   margin-left: 15px
@@ -237,16 +241,8 @@ body
 .location
   color: $location-color
 
-.git a 
+.email a, .projects a, .git a
   text-decoration: none
-  color: $github-color
-
-.projects
-  text-decoration: none
-  color: $projects-color
-
-.email
-  color: $contact-color
 
 #error-heading
   +responsive-font(1vw, 5px, 10px)
