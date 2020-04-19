@@ -1,4 +1,22 @@
 extends ../layout
 
 block content
-  h1 Oops
+  #particles-js
+  h1#error-heading Whoops! 
+    span#error-number 500
+
+  #error-terminal
+    #terminal
+      h1#prompt jazak
+        span#symbol  &#8226;
+        span#root  ~
+        span#directory /
+        span#arrow » 
+        span#info-text No such file or directory
+        span#cursor _
+
+  p#error-message Internal server error
+
+block scripts
+    script(src="/lib/particles.min.js")
+    script(src="/js/home.js")

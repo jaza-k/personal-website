@@ -1,16 +1,16 @@
 /// Viewport sized typography with minimum and maximum values
-/// @author Eduardo Boucas (@eduardoboucas)
-@mixin responsive-font($responsive, $min, $max: false, $fallback: false) 
+/// @author Eduardo Boucas (https://codepen.io/eduardoboucas/)
+=responsive-font($responsive, $min, $max: false, $fallback: false)
   $responsive-unitless: $responsive / ($responsive - $responsive + 1)
-  $dimension: if(unit($responsive) == 'vh', 'height', 'width')
-  $min-breakpoint: $min / $responsive-unitless * 100
-  @media (max-#{$dimension}: #{$min-breakpoint}) 
+  $dimension: if(unit($responsive) == "vh", "height", "width")
+  $min-breakpoint: $min / $responsive-unitless * 100 / 16px + 0em
+  @media (max-#{$dimension}: #{$min-breakpoint})
     font-size: $min
-  @if $max 
-    $max-breakpoint: $max / $responsive-unitless * 100
-    @media (min-#{$dimension}: #{$max-breakpoint}) 
+  @if $max
+    $max-breakpoint: $max / $responsive-unitless * 100 / 16px + 0em
+    @media (min-#{$dimension}: #{$max-breakpoint})
       font-size: $max
-  @if $fallback 
+  @if $fallback
     font-size: $fallback
   font-size: $responsive
 
@@ -68,7 +68,7 @@ body
 #root, #directory, #info-text, #error-heading, #go-home
   color: #fff
 
-#prompt, #symbol, #root, #arrow, #info-text, #go-home, #home-text
+#prompt, #symbol, #root, #arrow, #info-text, #go-home, #home-text, #description
   font-family: $main-font
   font-weight: 10
   display: inline-block
@@ -191,7 +191,7 @@ body
     opacity: 1
 
 #intro-one, #intro-two, #intro-three, #intro-four
-  +responsive-font(3vw, 17px, 20 px)
+  +responsive-font(3vw, 17px, 20px)
   padding-left: 2.5vw
   line-height: 30px
   letter-spacing: 0.06em
@@ -249,9 +249,9 @@ body
   color: $contact-color
 
 #error-heading
-  +responsive-font(4vw, 35px, 100px)
+  +responsive-font(1vw, 5px, 10px)
   margin-top: 300px
-  margin-left: 35%
+  margin-left: 50%
   font-family: $main-font
 
 #info-text

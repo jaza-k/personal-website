@@ -1,4 +1,8 @@
-extends layout
+extends ../layout
+
+block head
+  // CSS file for the projects page
+  link(rel="stylesheet" href="/stylesheets/main.min.css")
 
 append content
     #particles-js
@@ -11,8 +15,6 @@ append content
             span#cursor _
 
     #nav
-        //- #hamburger 
-        //-     p#menu-icon &#9776;
         p#github-link 
             a(target="_blank" rel="noreferrer" href="https://github.com/jaza-k") GitHub
         span.space &nbsp;
@@ -24,6 +26,7 @@ append content
         span.space &nbsp;
         p#contact-link
             a(href="#" id="email-link" title="email-alert") Contact
+
 
 block scripts
     script(src="/lib/particles.min.js")
