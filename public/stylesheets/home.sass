@@ -25,7 +25,7 @@ $projects-color: #CA86FF
 $location-color: #AA2828
 
 $break-large: 1400px
-$break-mid: 700px
+$break-mid: 775px
 $break-small: 500px
 
 body
@@ -44,23 +44,22 @@ body
   height: 100%
   top: 0
   z-index: 0
-  
 
 // TO-DO: FIX SCROLL PROBLEM. ADD INVISIBLE DIV/BACKGROUND FOR TEXT TO DISAPPEAR UNDER
 
-  
-  #terminal
+#terminal
+  // border: 1px solid red
   user-select: none
   margin-top: 0.5vh
   margin-left: 15px
-  +responsive-font(1vw, 8px, 10px)
+  +responsive-font(1vw, 8px, 9px)
   display: inline-block
   position: fixed
   top: 0%
   left: 0%
   @media (max-width: $break-mid)
-    +responsive-font(1vw, 7px, 8px)
-    margin-top: 0
+    +responsive-font(1vw, 8px, 9px)
+    margin-top: 5px
     margin-left: 10px
 
 #prompt, #home-text
@@ -116,7 +115,7 @@ body
 #nav
   user-select: none
   font-family: $main-font
-  +responsive-font(2vw, 15px, 22px)
+  +responsive-font(2vw, 15px, 17px)
   display: inline-flex
   text-transform: uppercase
   margin-right: 20px
@@ -160,33 +159,32 @@ body
     display: none
 
 #intro
-  margin-top: 105px
+  // border: 1px solid red
+  margin-top: 90px
   padding-left: 3vw
-  padding-right: 18vw
+  padding-right: 20vw
   display: inline-block
   margin-right: 350px
   @media (max-width: $break-large)
     margin-right: 0
   @media (max-width: $break-mid)
     margin-top: 55px
-    margin-right: 15px
-    padding-left: 10px
-    padding-right: 10px
-
-#main-heading, #intro-one, #intro-two, #intro-three, #intro-four
-  color: white
-  font-family: $sec-font
+    margin-right: 10px
+    padding-left: 8px
+    padding-right: 8px
 
 #main-heading
-  +responsive-font(5vw, 30px, 40px)
+  color: white
+  font-family: $sec-font
+  +responsive-font(4vw, 30px, 35px)
   font-weight: 800
   font-style: italic
-  margin-bottom: 35px
+  margin-bottom: 20px
   animation-name: textFadeIn
   animation-duration: 1.3s
   @media (max-width: $break-mid)
-    +responsive-font(3vw, 28px, 30px)
-    margin-bottom: 20px
+    +responsive-font(3vw, 30px, 32px)
+    margin-bottom: 30px
 
 @keyframes textFadeIn
   0% 
@@ -195,7 +193,9 @@ body
     opacity: 1
 
 #intro-one, #intro-two, #intro-three, #intro-four
-  +responsive-font(3vw, 17px, 20px)
+  color: white
+  font-family: $sec-font
+  +responsive-font(1vw, 17px, 20px)
   padding-left: 2.5vw
   line-height: 30px
   letter-spacing: 0.06em
@@ -203,14 +203,16 @@ body
   animation-name: slowFadeIn
   animation-duration: 1.7s
   @media (max-width: $break-mid)
-    +responsive-font(2.5vw, 14px, 17px)
-    line-height: 20px
+    +responsive-font(2vw, 15px, 18px)
+    line-height: 27px
     margin-bottom: 15px
-    padding-left: 20px
-    padding-right: 75px
+    padding-left: 13px
+    padding-right: 0px
 
 #intro-two
-  margin-bottom: 70px
+  margin-bottom: 45px
+  @media (max-width: $break-mid)
+    margin-bottom: 40px
   @media (max-width: $break-small)
     margin-bottom: 35px
 
@@ -256,3 +258,22 @@ body
 #go-home
   +responsive-font(2.5vw, 18px, 20px)
   margin-left: 40%
+
+#bottom-background
+  position: fixed
+  z-index: 0
+  background-image: linear-gradient(to top, darken(#1b1b1b, 1%) 0%, transparentize(#252525, 0.9) 100%)
+  bottom: 0
+  left: 0
+  width: 100vw
+  height: 14vw
+  max-height: 140px
+  min-height: 130px
+  @media (max-width: $break-small)
+    height: 33vw
+
+#footer
+  position: fixed
+  right: 2%
+  bottom: 2%
+  z-index: 4
