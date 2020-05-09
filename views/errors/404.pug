@@ -1,21 +1,23 @@
 extends ../layout
 
+block head
+  // CSS file for the error page
+  link(rel="stylesheet" href="/stylesheets/404.min.css")
+
 block content
   #particles-js
-  
+
+  #terminal
+    h1#prompt jazak
+      span#symbol  &#8226;
+      span#root  ~
+      span#directory /
+      span#arrow »
+      span#info-text No such file or directory
+      span#cursor _
+
   h1#error-heading Whoops! 
     span#error-number 404
-    
-  #error-terminal
-    #terminal
-      h1#prompt jazak
-        span#symbol  &#8226;
-        span#root  ~
-        span#directory /
-        span#arrow » 
-        span#info-text No such file or directory
-        span#cursor _
-
   p#go-home Go back 
     span#home-text home
 

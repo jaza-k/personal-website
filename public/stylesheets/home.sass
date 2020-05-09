@@ -22,7 +22,6 @@ $github-color: #6DDF6B
 $resume-color: #D8DB4B
 $contact-color: #53C2DA
 $projects-color: #CA86FF
-$location-color: #AA2828
 
 $break-large: 1400px
 $break-mid: 775px
@@ -48,10 +47,8 @@ body
 // TO-DO: FIX SCROLL PROBLEM. ADD INVISIBLE DIV/BACKGROUND FOR TEXT TO DISAPPEAR UNDER
 
 #terminal
-  // border: 1px solid red
   user-select: none
-  margin-top: 0.5vh
-  margin-left: 15px
+  margin: 0.5vh 0 0 15px
   +responsive-font(1vw, 8px, 9px)
   display: inline-block
   position: fixed
@@ -81,7 +78,7 @@ body
   letter-spacing: 0.04em
 
 #arrow
-  margin-left: 4px
+  margin: 0 0 1px 4px
   +responsive-font(2.8vw, 17px, 19px)
   @media (max-width: $break-mid)
     +responsive-font(1vw, 14px, 16px)
@@ -165,6 +162,7 @@ body
   padding-left: 3vw
   padding-right: 20vw
   display: inline-block
+  overflow-x: hidden
   margin-right: 350px
   @media (max-width: $break-large)
     margin-right: 0
@@ -186,6 +184,8 @@ body
     margin-bottom: 15px
     font-weight: 1000
     font-style: normal
+  @media (max-width: $break-small)
+    margin-left: 0px
 
 @keyframes textFadeIn
   0% 
@@ -198,7 +198,7 @@ body
   font-family: $sec-font
   +responsive-font(1vw, 17px, 20px)
   padding-left: 2.5vw
-  line-height: 30px
+  line-height: 25px
   letter-spacing: 0.06em
   margin-bottom: 28px
   animation-name: slowFadeIn
@@ -240,24 +240,11 @@ body
   100%
     opacity: 1
 
-.location
-  color: $location-color
+.location 
+  color: #AA2828
 
 .email a, .projects a, .git a
   text-decoration: none
-
-#error-heading
-  +responsive-font(1vw, 5px, 10px)
-  margin-top: 300px
-  margin-left: 50%
-  font-family: $main-font
-
-#info-text
-  margin-left: 10px
-
-#go-home
-  +responsive-font(2.5vw, 18px, 20px)
-  margin-left: 40%
 
 #bottom-background
   position: fixed

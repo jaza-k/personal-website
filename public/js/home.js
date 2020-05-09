@@ -1,10 +1,10 @@
 let particlesJSON = {
     "particles": {
       "number": {
-        "value": 110, // increase number for more particles. do not modify
+        "value": 130, // increase number for more particles. do not modify
         "density": {
           "enable": true,
-          "value_area": 800 // bigger the number, less will be created
+          "value_area": 760 // bigger the number, less will be created
         }
       },
       "color": {

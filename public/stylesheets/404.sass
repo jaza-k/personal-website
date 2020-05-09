@@ -21,41 +21,46 @@ $break-large: 1400px
 $break-mid: 775px
 $break-small: 500px
 
-h3
-  // border: 1px solid red
-  color: white
-  font-weight: 10
-  margin: 100px 60px 0 15px
-  font-family: $sec-font
-  +responsive-font(1vw, 17px, 20px)
-  letter-spacing: 0.02em
-  animation-name: textFadeIn
-  animation-duration: 1.3s
-  @media (max-width: $break-small)
-    +responsive-font(1vw, 16px, 17px)
-    padding: 0 3px 0 5px
-    margin: 70px 17px 15px 0
-  @media (max-width: $break-small)
-    +responsive-font(1vw, 16px, 17px)
-    padding: 0 3px 0 5px
-    margin: 70px 17px 15px 0
+body
+  background-image: url("/img/what-the-hex-dark.png")
+  background-position: 0 0
+  background-attachment: fixed
+  height: 100%
+  overflow-x: hidden
+  overflow-y: hidden
 
-@keyframes textFadeIn
-  0% 
-    opacity: 0
-  100%
-    opacity: 1
-  
+#terminal
+  user-select: none
+  margin-top: 0.5vh
+  +responsive-font(1vw, 8px, 9px)
+  display: inline-block
+  position: fixed
+  top: 0%
+  left: 0%
+  @media (max-width: $break-mid)
+    +responsive-font(1vw, 7px, 8px)
+    margin-top: 5px
+    margin-left: 10px
+  @media (max-width: $break-small)
+    margin-top: 0
+
+#arrow
+  margin: 0 7px 0 2px
+  +responsive-font(2.8vw, 14px, 15px)
+  @media (max-width: $break-mid)
+    +responsive-font(1vw, 13px, 14px)
+    margin-top: 3px 0 0 0
+
 #cursor
   color: white
   margin-left: 5px
   position: relative
   bottom: 2px
-  +responsive-font(4vw, 19px, 21px)
+  +responsive-font(4vw, 16px, 18px)
   animation: blink 1.8s infinite
   -webkit-animation: fade 1s infinite
   @media (max-width: $break-mid)
-    +responsive-font(1vw, 15px, 16px)
+    +responsive-font(1vw, 13px, 14px)
 
 @keyframes fade
   from
@@ -72,3 +77,20 @@ h3
     opacity: 0.5
   to
     opacity: 1.0
+
+#error-heading
+  text-align: center
+  display: block
+  +responsive-font(3.5vw, 30px, 32px)
+  margin: 300px 25% 0 25%
+  font-family: $main-font
+  @media (max-width: $break-mid)
+    margin: 140px 10% 0 10%
+  @media (max-width: $break-small)
+    margin: 170px 10% 0 10%
+
+#go-home
+  display: block
+  text-align: center
+  margin: 20px 35% 0 35%
+  +responsive-font(2vw, 14px, 16px)
