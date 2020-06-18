@@ -4,7 +4,7 @@ let particlesJSON = {
         "value": 130, // increase number for more particles. do not modify
         "density": {
           "enable": true,
-          "value_area": 760 // bigger the number, less will be created
+          "value_area": 1000 // bigger the number, less will be created
         }
       },
       "color": {
@@ -54,7 +54,7 @@ let particlesJSON = {
       },
       "move": {
         "enable": true,
-        "speed": 1.7, // speed of particle motion
+        "speed": 1, // speed of particle motion
         "direction": "right",
         "random": false,
         "straight": false,
