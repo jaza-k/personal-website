@@ -5,10 +5,14 @@ append content
     .hidden-div
         .hidden-nav-links
             ul.nav-links
-                li#github-link Github
-                li#resume-link Résumé
-                li#projects-link Projects
-                li#contact-link Contact
+                p#github-link 
+                    a(target="_blank" rel="noreferrer" href="https://github.com/jaza-k") GitHub
+                p#resume-link 
+                    a(href="#") Résumé
+                p#projects-link
+                    a(href="/projects") Projects
+                p#contact-link
+                    a(href="#" id="email-link" title="email-alert") Contact
     #burger
         .line-one
         .line-two
