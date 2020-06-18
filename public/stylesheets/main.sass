@@ -21,6 +21,95 @@ $break-large: 1400px
 $break-mid: 775px
 $break-small: 500px
 
+@keyframes navLinkFade
+  from 
+    opacity: 0
+    transform: translateX(50px)
+  to
+    opacity: 1
+    transform: translateX(0px)
+
+#burger
+  display: none
+  cursor: pointer
+  position: fixed
+  top: 12px
+  right: 3.8%
+  z-index: 9
+  @media (max-width: $break-mid)
+    display: block
+
+#burger div
+  width: 25px
+  height: 1.8px
+  background-color: #fff
+  margin: 5px
+  transition: all 0.3s ease
+
+.toggle-menu .line-one
+  background-color: #EAEAEA
+  transform: rotate(-45deg) translate(-5px, 6px)
+ 
+.toggle-menu .line-two
+  background-color: #EAEAEA
+  opacity: 0
+ 
+.toggle-menu .line-three
+  background-color: #EAEAEA
+  transform: rotate(45deg) translate(-3px, -4px)
+ 
+.hidden-div
+  color: green
+  height: 100vh
+  position: absolute
+  top: 0
+  right: 0px
+  width: 40%
+  background-color: #000
+  display: none
+  z-index: 8
+  box-shadow: -15px 0 28px #000
+  opacity: 0.98
+  @media (max-width: 500px)
+    width: 50%
+
+.hidden-nav-links
+  width: 160px
+  font-family: $main-font
+  font-weight: 10
+  text-transform: uppercase
+  color: #fff
+  text-align: center
+  letter-spacing: 0.04em
+  margin-top: 120px
+  margin-left: 20%
+  margin-right: 25%
+  display: flex
+  flex-direction: column
+  align-items: space-around
+  @media (max-width: 500px)
+    margin-top: 90px
+    margin-left: 15%
+
+.hidden-nav-links li
+  margin-bottom: 40px
+  list-style: none
+
+@keyframes fadeIn
+ 0%
+   opacity: 0
+ 100%
+   opacity: 1
+  
+.toggle-hidden-div
+  display: block
+  animation-name: fadeIn
+  animation-duration: 0.2s
+
+@media only screen and (max-width: $break-mid)
+  .nav-active
+    transform: translate(0%)
+
 h3
   color: white
   font-weight: 10
@@ -71,3 +160,20 @@ h3
     opacity: 0.5
   to
     opacity: 1.0
+
+#footer-logo
+  z-index: 6
+  width: 100px
+  transition: 0.3s
+  user-select: none
+  opacity: 0.8
+  @media (max-width: $break-small)
+    width: 80px
+    bottom: -3%
+  @media (max-width: 400px)
+    width: 70px
+    right: 6%
+    bottom: -2%
+  &:hover
+    transform: scale(1.1)
+    opacity: 1
