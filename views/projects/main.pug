@@ -29,3 +29,46 @@ append content
     h3 Here are some of my most recent projects. To view more, visit my 
         span.git #[a(href="https://github.com/jaza-k" style="color:#6DDF6B;" target="_blank" rel="noreferrer") #[em GitHub]]
         span .
+
+    -
+        let projectsList = {
+            project0: {
+                "url": "/lab/personal-site",
+                "heading": "khanabdullah.com",
+                "info": "The inner workings of this website, from the server to client side",
+                "tech": ["Node", "Express", "Heroku", "Pug", "SASS"],
+                "language": "JavaScript",
+            },
+            project1: {
+                "url": "/lab/face-recognition",
+                "heading": "Face Recognition",
+                "info": "Python script to train a model on your face and then using it to recognize you",
+                "tech": ["Python3", "Paramiko", "SCP", "SSH"],
+                "language": "Python",
+            },
+            project2: {
+                "url": "/lab/firestore-ios",
+                "heading": "Firestore iOS",
+                "info": "Simple iOS app with Firebase authentication and Cloud Firestore storage",
+                "tech": ["React JS", "Netlify", "SASS"],
+                "language": "JavaScript",
+            },
+            project3: {
+                "url": "/lab/socket-chat",
+                "heading": "socketChat",
+                "info": "A real-time messaging application built using Socket.IO and Express",
+                "tech": ["Rust's standard libraries"],
+                "language": "Rust",
+            }
+        }
+
+    .projects-display
+        ul#project-cards
+            - for (let j = 0; j < Object.keys(projectsList).length; j++)
+                - let project = projectsList[[`project${j}`]]
+                li.card(class=`${project.language.toLowerCase()}`)
+                    a(href=project.url).project-link
+                        h3.project-language=project.language
+                        h1.project-heading=project.heading
+                        p.project-info=project.info
+                        p.project-tech=project.tech.join(", ")
