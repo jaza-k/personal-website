@@ -26,6 +26,8 @@ body, html
   width: 100%
   overflow-y: scroll
   overflow-x: hidden
+  @media (max-width: $break-mid)
+    overflow: hidden
 
 #description
   color: white
@@ -36,6 +38,8 @@ body, html
   letter-spacing: 0.02em
   animation-name: textFadeIn
   animation-duration: 1.3s
+  @media (max-width: $break-mid)
+    margin-top: 96px
   @media (max-width: $break-small)
     +responsive-font(1vw, 17px, 18px)
     margin: 70px 18px 15px 7px
@@ -68,19 +72,22 @@ body, html
 // PROJECTS SECTION
 
 #projects-display 
-  // border: 1px solid red
-  width: 65%
+  border: 1px solid red
+  width: 60%
   height: 70vh
   padding: 0
   display: flex
-  justify-content: center
+  overflow-y: scroll  
+  overflow-x: hidden
   margin: 40px 60px 0 15px
   animation-name: slowFadeIn
   animation-duration: 1.2s
   @media (max-width: $break-large)
-    width: 90%
-  @media (max-width: 680px)
-    width: 94%
+    width: 80%
+  @media (max-width: $break-mid)
+    margin-top: 30px
+  @media (max-width: 980px)
+    width: 89%
     margin-top: 20px
 
 @keyframes slowFadeIn
@@ -94,13 +101,13 @@ body, html
     opacity: 1
 
 #project-cards
-  // border: 1px solid green
+  border: 1px solid green
   margin: 0
   list-style: none
   columns: 2
-  padding: 0
-  column-gap: 20px
-  width: 80%
+  padding: 15px
+  column-gap: 30px
+  width: 100%
   height: 100%
   @media (max-width: $break-mid)
     width: 80%
@@ -108,98 +115,58 @@ body, html
     display: flex
     flex-direction: column
     align-items: center
+  @media (max-width: 680px)
+    width: 90%
 
 .card
+  overflow: hidden
   border: 3px solid #70324c
   padding: 15px
-  margin: 0 0 20px 0
+  margin: 0 0 30px 0
   height: 175px
   z-index: 5
   border-radius: 10px
   background: #000000
+  transition: all 0.2s ease-in
+  &:hover
+    cursor: pointer
+    box-shadow: 0 0 17px #743c53
+    transition: all 0.2s ease-in
 
 .project-heading
   font-family: $main-font
-  font-size: 25px
+  +responsive-font(1.5vw, 20px, 22px)
   margin-top: 0
   display: inline
 
-.project-language
-  font-size: 18px
+.language
+  // border: 1px solid red
+  width: max-content
   display: inline
   float: right
-  margin-top: 6px
+
+.project-language
+  display: inline
+  +responsive-font(1vw, 16px, 18px)
 
 .language-circle
-  width: 20px
-  height: 10px
-  margin: 20px
-  border-radius: 10px
+  width: 11px
+  height: 11px
   background: #dbcc30
-  display: inline
+  display: inline-block
+  border-radius: 20px
+  margin-right: 8px
 
 .project-language, .project-link, .project-info, .project-tech
-  color: white
+  color: #EAEAEA
   font-family: $sec-font
   text-decoration: none
 
 .project-tech
   font-style: italic
+  margin-top: 55px
 
-// .card
-//   z-index: 5
-//   width: 100%
-//   background: #000000
-//   border-radius: 10px
-//   border: 0.1px solid #70324c
-//   overflow: hidden
-//   margin-bottom: 20px
-//   transition: 0.1s
-//   cursor: pointer
-//   height: 195px
-//   &:hover
-//     background: lighten(#0f0f0f, 3%)
-//   @media (max-width: 1080px)
-//     height: 210px
-//   @media (max-width: 680px)
-//     height: 900px
-
-// .project-link
-//   text-decoration: none
-//   color: #fff
-//   transition: 0.3s ease-in-out
-//   width: 100%
-//   // padding: 0 25px 0 15px
-//   &:hover
-//     .card-heading
-//       transform: translateX(5px)
-
-// .project-heading
-//   // margin: 5px 0px 5px 0px
-//   transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)
-//   max-width: 55%
-//   @media (max-width: 680px)
-//     font-size: 22px
-//     max-width: 90%
-
-// .project-info
-//   // margin: 10px 0 0 0
-//   color: darken(#fff, 5%)
-//   max-width: 90%
-//   @media (max-width: 680px)
-//     font-size: 13px
-//     max-width: 100%
-
-// .project-tech
-//   font-style: italic
-//   justify-self: flex-end
-//   color: darken(#fff, 20%)
-//   @media (max-width: 680px)
-//     font-size: 13px
-
-// .project-language
-//   // margin-bottom: 10px
-//   color: darken(#fff, 20%)
-//   max-width: 20%
-//   @media (max-width: 680px)
-//     font-size: 14px
+.project-info
+  font-size: 15px
+  font-weight: 10
+  margin-top: 30px
