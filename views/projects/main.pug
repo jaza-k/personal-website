@@ -34,28 +34,28 @@ append content
         let projectsList = {
             project0: {
                 "url": "https://github.com/jaza-k/personal-website",
-                "heading": "khanabdullah.com",
+                "heading": "jazakhan.com",
                 "info": "The inner workings of this website, from the server to client side",
                 "tech": ["Node", "Express", "Heroku", "Pug", "SASS"],
                 "language": "JavaScript",
             },
             project1: {
                 "url": "https://github.com/jaza-k/sshclient",
-                "heading": "Face Recognition",
+                "heading": "blacklivesmatter.net",
                 "info": "Python script to train a model on your face and then using it to recognize you",
                 "tech": ["Python3", "Paramiko", "SCP", "SSH"],
                 "language": "Python",
             },
             project2: {
                 "url": "https://github.com/jaza-k/blmsite",
-                "heading": "Firestore iOS",
+                "heading": "SSH/SCP Client",
                 "info": "Simple iOS app with Firebase authentication and Cloud Firestore storage",
                 "tech": ["React JS", "Netlify", "SASS"],
                 "language": "JavaScript",
             },
             project3: {
                 "url": "https://github.com/jaza-k/portscan",
-                "heading": "socketChat",
+                "heading": "PortScan",
                 "info": "A real-time messaging application built using Socket.IO and Express",
                 "tech": ["Rust's standard libraries"],
                 "language": "Rust",
@@ -69,8 +69,8 @@ append content
                 li.card(class=`${project.language.toLowerCase()}`)
                     a(href=project.url).project-link
                         h1.project-heading=project.heading
-                        .language-circle
-                            span 
-                                h3.project-language=project.language
+                        .language
+                            .language-circle
+                            h3.project-language=project.language
                         p.project-info=project.info
                         p.project-tech=project.tech.join(", ")
