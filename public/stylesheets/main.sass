@@ -72,7 +72,7 @@ body, html
 // PROJECTS SECTION
 
 #projects-display 
-  border: 1px solid red
+  // border: 1px solid red
   width: 60%
   height: 70vh
   padding: 0
@@ -101,7 +101,7 @@ body, html
     opacity: 1
 
 #project-cards
-  border: 1px solid green
+  // border: 1px solid green
   margin: 0
   list-style: none
   columns: 2
@@ -117,6 +117,8 @@ body, html
     align-items: center
   @media (max-width: 680px)
     width: 90%
+  @media (max-width: $break-small)
+    padding: 5px
 
 .card
   overflow: hidden
@@ -124,13 +126,12 @@ body, html
   padding: 15px
   margin: 0 0 30px 0
   height: 175px
-  z-index: 5
   border-radius: 10px
   background: #000000
   transition: all 0.2s ease-in
   &:hover
     cursor: pointer
-    box-shadow: 0 0 17px #743c53
+    box-shadow: 0 0 19px #743c53
     transition: all 0.2s ease-in
 
 .project-heading
@@ -140,7 +141,6 @@ body, html
   display: inline
 
 .language
-  // border: 1px solid red
   width: max-content
   display: inline
   float: right
