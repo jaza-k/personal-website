@@ -41,14 +41,14 @@ append content
             },
             project1: {
                 "url": "https://github.com/jaza-k/sshclient",
-                "heading": "blacklivesmatter.net",
-                "info": "Python script to train a model on your face and then using it to recognize you",
+                "heading": "SSH/SCP Client",
+                "info": "A Python script to remotely handle tasks through SSh",
                 "tech": ["Python3", "Paramiko", "SCP", "SSH"],
                 "language": "Python",
             },
             project2: {
                 "url": "https://github.com/jaza-k/blmsite",
-                "heading": "SSH/SCP Client",
+                "heading": "blacklivesmatter.com",
                 "info": "Simple iOS app with Firebase authentication and Cloud Firestore storage",
                 "tech": ["React JS", "Netlify", "SASS"],
                 "language": "JavaScript",
@@ -66,11 +66,11 @@ append content
         ul#project-cards
             - for (let j = 0; j < Object.keys(projectsList).length; j++)
                 - let project = projectsList[[`project${j}`]]
-                li.card(class=`${project.language.toLowerCase()}`)
+                li.card
                     a(href=project.url).project-link
                         h1.project-heading=project.heading
                         .language
-                            .language-circle
+                            .language-circle(class=`${project.language.toLowerCase()}`)
                             h3.project-language=project.language
                         p.project-info=project.info
                         p.project-tech=project.tech.join(", ")
