@@ -72,7 +72,7 @@ body, html
 // PROJECTS SECTION
 
 #projects-display 
-  // border: 1px solid red
+  border: 1px solid red
   width: 60%
   height: 70vh
   padding: 0
@@ -101,7 +101,7 @@ body, html
     opacity: 1
 
 #project-cards
-  // border: 1px solid green
+  border: 1px solid green
   margin: 0
   list-style: none
   columns: 2
@@ -130,13 +130,14 @@ body, html
   background: #000000
   transition: all 0.2s ease-in
   &:hover
+    transform: scale(1.02)
     cursor: pointer
     box-shadow: 0 0 19px #743c53
     transition: all 0.2s ease-in
 
 .project-heading
   font-family: $main-font
-  +responsive-font(1.5vw, 20px, 22px)
+  +responsive-font(1.5vw, 19px, 21px)
   margin-top: 0
   display: inline
 
