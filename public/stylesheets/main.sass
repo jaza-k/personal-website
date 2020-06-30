@@ -73,7 +73,7 @@ body, html
 
 #projects-display 
   border: 1px solid red
-  width: 60%
+  width: 65%
   height: 70vh
   padding: 0
   display: flex
@@ -87,7 +87,7 @@ body, html
   @media (max-width: $break-mid)
     margin-top: 30px
   @media (max-width: 980px)
-    width: 89%
+    width: 92%
     margin-top: 20px
 
 @keyframes slowFadeIn
@@ -123,7 +123,7 @@ body, html
 .card
   overflow: hidden
   border: 3px solid #70324c
-  padding: 15px
+  padding: 20px
   margin: 0 0 30px 0
   height: 175px
   border-radius: 10px
@@ -134,28 +134,40 @@ body, html
     cursor: pointer
     box-shadow: 0 0 19px #743c53
     transition: all 0.2s ease-in
+  @media (max-width: 950px)
+    padding: 15px
+  @media (max-width: $break-small)
+    height: 300px
 
 .project-heading
+  // border: 1px solid red
   font-family: $main-font
-  +responsive-font(1.5vw, 19px, 21px)
-  margin-top: 0
+  +responsive-font(1.7vw, 18px, 21px)
   display: inline
 
 .language
+  // border: 1px solid red
   width: max-content
   display: inline
   float: right
+  margin: 5px 0 0 0
 
 .project-language
   display: inline
-  +responsive-font(1vw, 16px, 18px)
+  +responsive-font(1.5vw, 16px, 17px)
 
 .language-circle
   width: 13px
   height: 13px
   display: inline-block
   border-radius: 20px
-  margin-right: 8px
+  margin-right: 5px
+  @media (max-width: 985px)
+    height: 12px
+    width: 12px
+  @media (max-width: $break-small)
+    width: 11px
+    height: 11px
 
 .project-language, .project-link, .project-info, .project-tech
   color: #EAEAEA
@@ -163,13 +175,15 @@ body, html
   text-decoration: none
 
 .project-tech
+  // border: 1px solid red
   font-style: italic
-  margin-top: 55px
+  color: #fff
 
 .project-info
-  font-size: 15px
+  // border: 1px solid red
+  +responsive-font(1.3vw, 12px, 16px)
   font-weight: 10
-  margin-top: 30px
+  color: #c9c9c9
 
 .javascript
   background: #dbcc30
