@@ -346,6 +346,7 @@ body
 // FOOTER 
 
 #bottom-background
+  // border: 1px solid red
   position: fixed
   z-index: 1
   background-image: linear-gradient(to top, darken(#000000, 1%) 50%, transparentize(#000000, 1) 100%)
@@ -356,11 +357,11 @@ body
   max-height: 170px
   min-height: 100px
   @media (max-width: 768px)
-    height: 33vw
+    height: 34vw
   @media (max-width: $break-small)
-    height: 19vh
+    height: 18vw
 
-#footer
+#logo-container
   position: fixed
   right: 2.5%
   bottom: 1.5%
@@ -379,10 +380,11 @@ body
   margin: 0 0 5px 0
   @media (max-width: $break-small)
     width: 56px
-    margin-right: 10px
-    margin-bottom: 5px
+    margin-right: 0 10px 2px 0
+    bottom: -1%
   @media (max-width: 400px)
-    margin-right: 10px
+    margin: 0 10px 0 0
+    bottom: -1%
   &:hover
     transform: scale(1.1)
     opacity: 1
