@@ -1,10 +1,10 @@
 let particlesJSON = {
     "particles": {
       "number": {
-        "value": 130, // increase number for more particles. do not modify
+        "value": 90, // increase number for more particles. do not modify
         "density": {
           "enable": true,
-          "value_area": 1000 // bigger the number, less will be created
+          "value_area": 900 // bigger the number, less will be created
         }
       },
       "color": {
@@ -47,14 +47,14 @@ let particlesJSON = {
       },
       "line_linked": {
         "enable": true,
-        "distance": 175, // more dense. higher the number, the closer the lines
+        "distance": 150, // higher the number, more dense the lines
         "color": "#FD9AFF",
         "opacity": 0.4,
-        "width": 1
+        "width": 1 // width of each individual line
       },
       "move": {
         "enable": true,
-        "speed": 1, // speed of particle motion
+        "speed": 1.4, // speed of particle motion
         "direction": "right",
         "random": false,
         "straight": false,
@@ -82,7 +82,7 @@ let particlesJSON = {
       },
       "modes": {
         "grab": {
-          "distance": 25, // distance between lines
+          "distance": 125, // distance between lines
           "line_linked": {
             "opacity": 1
           }
@@ -95,7 +95,7 @@ let particlesJSON = {
           "speed": 3
         },
         "repulse": {
-          "distance": 150,
+          "distance": 100,
           "duration": 0.4
         },
         "push": {
