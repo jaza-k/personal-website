@@ -72,29 +72,28 @@ body, html
 // PROJECTS SECTION
 
 #projects-display
-  // border: 1px solid red
-  width: 65%
-  height: 70vh
+  width: 70%
+  height: 75vh
   padding: 15px 15px 15px 0
   display: flex
   overflow-y: scroll  
   overflow-x: hidden
-  margin: 30px 60px 0 10px
+  margin: 0 60px 0 0
   animation-name: slowFadeIn
   animation-duration: 1.2s
   @media (max-width: $break-large)
-    width: 80%
+    width: 65%
   @media (max-width: $break-mid)
     margin-top: 25px
     padding-bottom: 70px !important
     height: 62vh
   @media (max-width: 980px)
     margin-top: 15px
-    width: 92%
+    width: 93%
   @media (max-width: $break-small)
     height: 105vh
-    width: 94%
-  
+    width: 96%
+
 @keyframes slowFadeIn
   0%
     opacity: 0
@@ -106,12 +105,11 @@ body, html
     opacity: 1
 
 #project-cards
-  // border: 1px solid green
   margin: 0
   list-style: none
   columns: 2
-  padding: 15px
-  column-gap: 30px
+  padding: 25px
+  column-gap: 33px
   width: 100%
   height: 100%
   @media (max-width: $break-mid)
@@ -125,7 +123,7 @@ body, html
     width: 90%
   @media (max-width: $break-small)
     padding: 5px
-    padding-bottom: 300px !important
+    padding-bottom: 360px !important
 
 .card
   display: flex
@@ -134,7 +132,7 @@ body, html
   overflow: hidden
   border: 3px solid #70324c
   padding: 10px 10px 0 20px
-  margin: 0 0 30px 0
+  margin: 0 0 30px 5px
   height: 175px
   border-radius: 10px
   background: #000000
@@ -144,6 +142,10 @@ body, html
     cursor: pointer
     box-shadow: 0 0 19px #743c53
     transition: all 0.2s ease-in
+  @media (max-width: $break-mid)
+    padding: 20px 20px 10px 30px
+  @media (max-width: $break-small)
+    padding: 10px 10px 0 20px
 
 .project-heading
   font-family: $main-font
@@ -196,6 +198,9 @@ body, html
 
 .rust
   background: #ffcea5
+
+.shell
+  background: #89e051
 
 #bottom-background
   position: fixed
