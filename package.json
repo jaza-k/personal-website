@@ -12,6 +12,10 @@
   "bugs": {
     "url": "https://github.com/jaza-k/personal-website/issues"
   },
+  "scripts": {
+    "gulp": "gulp",
+    "minify": "gulp minify"
+  },
   "homepage": "https://jazakhan.com",
   "dependencies": {
     "compression": "^1.7.4",
