@@ -34,7 +34,7 @@ body, html
   font-weight: 10
   margin: 125px 60px 0 15px
   font-family: $sec-font
-  +responsive-font(1vw, 18px, 21px)
+  +responsive-font(1.5vw, 19px, 22px)
   letter-spacing: 0.02em
   animation-name: textFadeIn
   animation-duration: 1.3s
@@ -126,6 +126,7 @@ body, html
     padding-bottom: 360px !important
 
 .card
+  opacity: 0.8
   display: flex
   align-items: center
   justify-content: space-evenly
@@ -135,7 +136,7 @@ body, html
   margin: 0 0 30px 5px
   height: 175px
   border-radius: 10px
-  background: #000000
+  background: #080808
   transition: all 0.2s ease-in
   &:hover
     transform: scale(1.02)
@@ -183,12 +184,13 @@ body, html
 .project-tech
   font-style: italic
   color: #fff
+  font-weight: 1000
   +responsive-font(2vw, 14px, 16px)
 
 .project-info
-  +responsive-font(1.9vw, 13px, 15px)
+  +responsive-font(2vw, 14px, 16px)
   font-weight: 10
-  color: #c9c9c9
+  color: #d3d3d3
 
 .javascript
   background: #dbcc30
