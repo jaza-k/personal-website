@@ -54,7 +54,7 @@ let particlesJSON = {
       },
       "move": {
         "enable": true,
-        "speed": 1.4, // speed of particle motion
+        "speed": 2, // speed of particle motion
         "direction": "right",
         "random": false,
         "straight": false,
