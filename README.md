@@ -1,4 +1,4 @@
-# [jazakhan.com](https://jazakhan.com)
+# personal website
 🖥️ This is where you can find the inner workings of my site.
  
 ## To run
