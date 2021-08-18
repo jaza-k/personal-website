@@ -1,0 +1,20 @@
+export default {
+    descriptionFirst: "full-stack developer",
+    descriptionSecond: "cybersec enthusiast",
+    aboutLink: "about",
+    aboutLinkSubtitle: "Who am I?",
+    projectsLink: "projects",
+    projectsLinkSubtitle: "What I've made",
+    contactLinkSubtitle: "Let's talk",
+    languageCode: "FR",
+    languageChangeButton: "je préfère le français svp",
+    greeting: "Hey",
+    aboutP1: "I’m Jaza, a full-stack software developer and security amateur based in Canada.",
+    aboutP2: "I like to create, design, develop, and build new things that spark my interest.",
+    aboutP3: "When I’m not coding away, I can probably be found working out, playing video games or ",
+    TVShow: "watching Rick and Morty",
+    projectsHeading: "Some stuff I’ve made",
+    contactP1: "Feel free to reach out and ",
+    email: "send me an e-mail",
+    PSMessage: "P.S. If you ever find yourself in Alberta, explore the beautiful national park of Jasper."
+};
