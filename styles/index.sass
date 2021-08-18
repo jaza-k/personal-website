@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed&family=Inconsolata&display=swap')
+    
+$bg-color: #0F0F0F
+$pink: #F36993
+$off-white: #DBDBDB
+$main-font: "Inconsolata"
+
+html
+  cursor: url(../public/img/cursor.png) 2 2, default
+  height: 100%
+
+body
+  background-color: #0f0f0f
+  // background-image: url('/img/retrowave-1.png')
+  // background-size: cover
+  // background-position: center
+
+h1
+  color: white
+
+.wrapper
+  position: fixed
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+    
+.wrapper:before
+  content: ''
+  display: inline-block
+  height: 100%
+  vertical-align: middle
+  //margin-right: -0.25em
+
+.wrapper:after
+  content: ''
+  position: fixed
+  top: 13px
+  right: 13px
+  bottom: 13px
+  left: 13px
+  border: 1px solid rgba(255,255,255,.2)
+
+.content
+  border: 1px solid pink
+  width: 80%
+  height: 60%
+  overflow-y: scroll
+
+.triangles-bg
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-image: url('/img/triangles.png')
+  background-size: cover
+  background-position: center
+  opacity: 0.02
+
+.inner-box
+  display: inline-block
+
+.terminal
+  font-family: $main-font, monospace
+  user-select: none
+  display: inline-block
+  position: fixed
+  top: 10px
+  left: 1.5%
+  margin: 0 0 0 10px
+  font-size: 11.5px
+
+#dot, #arrow, #error-number
+  color: $pink
+
+#dot
+  font-size: 26px
+
+#root, #directory
+  color: #FFFFFF
+
+#prompt, #dot, #root, #arrow
+  font-family: $main-font, monospace
+  font-weight: 800
+  display: inline-block
+  text-align: center
+  letter-spacing: 0.04em
+
+#arrow
+  margin: 0 0 0 8px
+  font-size: 26px
+
+#cursor
+  color: white
+  font-size: 29px
+  margin-left: 7px
+  position: relative
+  bottom: 2px
+  animation: blink 2s infinite
+  -webkit-animation: fade 1.2s infinite
+ 
+@keyframes fade
+  from
+    opacity: 1.0
+  50%
+    opacity: 0
+  to
+    opacity: 1.0
+
+#dot
+  font-size: 26x
+
+.menu
+  display: block
+  position: fixed
+  top: 37px
+  right: 2%
+  z-index: 10
+
+.menu div
+  width: 35px
+  height: 4px
+  background-color: #FFFFFF
+  margin: 6px 6px 8px 0
+  transition: all 0.3s ease
+  border-radius: 5px
+
+#line-one, #line-three
+  width: 25px
+  // MAKE THESE SHORTER ON HOVER (ANIMATION)
+  // &:hover
+  //   width: 10px
+
+.toggle-menu #line-one
+  background-color: $off-white
+  transform: rotate(-45deg) translate(-5px, 6px)
+ 
+.toggle-menu #line-two
+  background-color: $off-white
+  opacity: 0
+ 
+.toggle-menu #line-three
+  background-color: $off-white
+  transform: rotate(45deg) translate(-3px, -4px)
+
+.personal-logo
+  position: fixed
+  bottom: 5%
+  right: 2.7%
+
+.logo-image
+  width: 100px
+  height: 150px
+
+.scrollbar
+  width: 5px
+  height: 200px
+  background-color: $off-white
+  position: fixed
+  bottom: 5%
+  left: 4%
+  border-radius: 5px
+
+.mini-scrollbar
+  width: 5px
+  background-color: $pink
+  height: 50px
+  border-radius: 5px
+
+.scroll-text
+  text-transform: uppercase
+  font-family: $main-font, monospace
+  font-size: 20px
+  color: $off-white
+  position: fixed
+  bottom: 19.4%
+  left: 1.3%
+  transform: rotate(-90deg)
+  letter-spacing: 0.03em
+
+.greeting
+  color: $off-white
+  font-family: $main-font
+  //margin-left: 100px
+  font-size: 90px
+  // top: 30%
+  // position: absolute
+
+.lang-button
+  color: $off-white
+  font-family: $main-font
+  margin-left: 100px
+  font-size: 20px
+  top: 50%
+  position: fixed
+
+.lang-code
+  color: $pink
+  text-decoration: underline
+
+select
+  margin-left: 100px
+  z-index: 2
+  position: absolute
+
+option
+  color: $off-white
+  z-index: 2
+  position: absolute
+
+// HOW TO HIDE FAT SCROLLBAR
+// .main-box
+//     overflow-y: scroll
+//     scrollbar-width: none // Firefox
+//     -ms-overflow-style: none // IE 10+
+    
+// .main-box::-webkit-scrollbar
+//     display: none  // Safari and Chrome
