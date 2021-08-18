@@ -1,4 +1,3 @@
-import Layout from '../components/Layout';
 import Lines from '../components/Lines'
 
 const About: React.FunctionComponent = () => {
