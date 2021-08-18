@@ -1,14 +1,21 @@
 import Layout from '../components/Layout';
 import Lines from '../components/Lines';
 
-export default function Home() {
+// ADD TRANSLATION LOGIC HERE
+
+const Home: React.FunctionComponent = () => {
     return (
-        <Layout>
+        <div id="Home">
             <div className="introduction">
                 <h1 className="name">jaza khan</h1>
                 <Lines/>
+
                 <p className="description">full-stack developer /<br/>cybersec enthusiast</p>
+                {/* <div>{translation.descriptionFirst} / <br/> {translation.descriptionSecond}</div> */}
+            
             </div>
-        </Layout>
+        </div>
     )
 }
+
+export default Home
